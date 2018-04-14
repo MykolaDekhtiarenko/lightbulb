@@ -3,14 +3,17 @@ var globalCharacteristic = null;
 
 $(document).ready(function () {
 
+    if (navigator.serviceWorker){
+        navigator.serviceWorker.register("js/serviceWorker.js")
+    }
 
     $(".root").on('click', function () {
         if (!connected) {
             navigator.bluetooth.requestDevice({
-                filters: [{services: [0xffe5]}],
-                optionalServices: [0x0000ffe0]
+                filters: [{services: [0xffe5]}]
             })
                 .then(function (device) {
+                    device.addEventListener('gattserverdisconnected', onDisconnected);
                     return device.gatt.connect();
                 })
                 .then(function (server) {
@@ -28,8 +31,8 @@ $(document).ready(function () {
     });
 
     $(".color-picker").on('click', function () {
-       $("#color-picker").click();
-       $('.color-picker-text-wrapper').hide();
+        $("#color-picker").click();
+        $('.color-picker-text-wrapper').hide();
     });
 
     $('#color-picker').on('change', function () {
@@ -37,7 +40,7 @@ $(document).ready(function () {
         $('.color-picker').css("background", $('#color-picker').val());
         changeColor(parseInt(getRed(), 16), parseInt(getGreen(), 16), parseInt(getBlue(), 16));
     });
-    
+
     $('#rainbow-mode-btn').on('click', function () {
         rainbowMode();
     });
@@ -64,15 +67,15 @@ function updateRGBValues() {
 }
 
 function getRed() {
-    return $('#color-picker').val().slice(1,3);
+    return $('#color-picker').val().slice(1, 3);
 }
 
 function getGreen() {
-    return $('#color-picker').val().slice(3,5);
+    return $('#color-picker').val().slice(3, 5);
 }
 
 function getBlue() {
-    return $('#color-picker').val().slice(5,7);
+    return $('#color-picker').val().slice(5, 7);
 }
 
 
@@ -80,7 +83,7 @@ function changeColor(red, green, blue) {
     var data = new Uint8Array([
         0x56, red, green, blue, 0x00, 0xf0, 0xaa
     ]);
-    return globalCharacteristic.writeValue(data);
+    globalCharacteristic.writeValue(data);
 }
 
 function rainbowMode() {
@@ -93,4 +96,10 @@ function changeBrightness(brightness) {
         0x56, parseInt(getRed(), 16), parseInt(getGreen(), 16), parseInt(getBlue(), 16), brightness, 0xf0, 0xaa
     ]);
     return globalCharacteristic.writeValue(data);
+}
+
+function onDisconnected() {
+    $(".message").show();
+    $(".control-center").hide();
+    connected = false;
 }

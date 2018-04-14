@@ -7,7 +7,7 @@ body{
 }
 
 .header{
-    height: 6vmin;
+    height: 8vmin;
     top: 0;
     left: 0;
     right: 0;
@@ -18,7 +18,7 @@ body{
 }
 
 .header-title{
-    font-size: 22px;
+    font-size: 4vm;
     text-align: center;
     margin: 0!important;
 }

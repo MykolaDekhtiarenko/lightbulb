@@ -1,17 +1,15 @@
 {
-  "lang": "en",
-  "background_color": "#2c1a31",
-  "theme_color": "#2c1a31",
-  "name": "Web Light Bulb",
+  "name": "Web Light",
   "short_name": "Web Light",
+  "start_url": "/",
   "display": "standalone",
-  "start_url": "index.html",
-  "orientation": "portrait",
+  "theme_color": "#eee",
+  "background_color": "#eee",
   "icons": [
     {
-      "src": "images/icon.png",
-      "sizes": "144x144",
-      "type": "image/png"
+      "src": "lightbulb.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ]
 }
