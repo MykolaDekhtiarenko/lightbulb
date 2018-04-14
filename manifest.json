@@ -1,7 +1,7 @@
 {
   "name": "Web Light",
   "short_name": "Web Light",
-  "start_url": "/Lightbulb/",
+  "start_url": "https://mykoladekhtiarenko.github.io/lightbulb/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#b00e23",
