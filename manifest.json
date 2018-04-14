@@ -1,15 +1,16 @@
 {
   "name": "Web Light",
   "short_name": "Web Light",
-  "start_url": "/",
+  "start_url": "/lightbulb",
   "display": "standalone",
-  "theme_color": "#eee",
-  "background_color": "#eee",
+  "theme_color": "#000000",
+  "background_color": "#b00e23",
   "icons": [
     {
-      "src": "lightbulb.png",
-      "type": "image/png",
+      "src": "lightbulb.svg",
+      "type": "image/svg",
       "sizes": "512x512"
     }
   ]
 }
+

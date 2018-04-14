@@ -2,12 +2,11 @@ body{
     margin: 0;
     color: white;
     font-weight: 200;
-    font-size: 18px;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .header{
-    height: 8vmin;
+    height: 10vmin;
     top: 0;
     left: 0;
     right: 0;
@@ -18,7 +17,7 @@ body{
 }
 
 .header-title{
-    font-size: 4vm;
+    font-size: 3.5vmin;
     text-align: center;
     margin: 0!important;
 }
@@ -106,4 +105,8 @@ body{
 .rainbow-mode-btn:hover{
     background: white;
     color: #b00e23;
+}
+
+.lightbulb{
+    font-size: 100px;
 }

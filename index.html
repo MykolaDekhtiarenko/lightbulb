@@ -4,30 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#FFFFFF">
-    <title>Title</title>
+    <title>Web Light</title>
 
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" type="text/css" href="css/appshell.css">
+    <link href="css/icomoon.svg">
+    <link rel="stylesheet" href="css/style.css">
 
-    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
-            integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
-            crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"
-            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-            crossorigin="anonymous"></script>
+    <script src="js/jquery-3.3.1.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/serviceWorker.js"></script>
+    <script src="serviceWorker.js"></script>
 
 </head>
 <body>
+<script>
+    if (navigator.serviceWorker){
+        navigator.serviceWorker.register("serviceWorker.js")
+    }
+</script>
 <header class="header vertical">
-    <div class="header-title">Magic Blue</div>
+    <div class="header-title">Web Light</div>
 </header>
 <div class="root vertical">
     <div class="message">
 
-        <i class="lamp"></i>
-        <i class="far fa-lightbulb" style="font-size: 70px"></i>
+        <span class="icon-lightbulb2 lightbulb"></span>
         <br>
         <br>
         Tap anywhere to connect

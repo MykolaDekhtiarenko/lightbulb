@@ -3,10 +3,6 @@ var globalCharacteristic = null;
 
 $(document).ready(function () {
 
-    if (navigator.serviceWorker){
-        navigator.serviceWorker.register("js/serviceWorker.js")
-    }
-
     $(".root").on('click', function () {
         if (!connected) {
             navigator.bluetooth.requestDevice({
