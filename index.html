@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Title</title>
+
+    <link rel="stylesheet" type="text/css" href="css/appshell.css">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
+            integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+
+</head>
+<body>
+<header class="header vertical">
+    <div class="header-title">Magic Blue</div>
+</header>
+<div class="root vertical">
+    <div class="message">
+
+        <i class="lamp"></i>
+        <i class="far fa-lightbulb" style="font-size: 70px"></i>
+        <br>
+        <br>
+        Tap anywhere to connect
+    </div>
+    <div class="control-center" style="display: none;">
+        <div class="centered-div-wrapper">
+            <div class="rgb-section">
+                <div class="color-section red">
+                    R <span id="red-value">0</span>
+                </div>
+                <div class="color-section green">
+                    G <span id="green-value">0</span>
+                </div>
+                <div class="color-section blue">
+                    B <span id="blue-value">0</span>
+                </div>
+            </div>
+        </div>
+        <div class="centered-div-wrapper">
+            <div class="color-picker ">
+                <div class="color-picker-text-wrapper">
+                    <div class="color-picker-text">
+                        Tap here to set the color
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="centered-div-wrapper">
+            <div>
+                <input type="range" min="1" max="99" value="99" class="brightnessSlider" id="brightnessSlider">
+            </div>
+        </div>
+        <div class="centered-div-wrapper">
+            <button id="rainbow-mode-btn" class="rainbow-mode-btn">
+                Rainbow Mode
+            </button>
+        </div>
+
+
+
+        <input id="color-picker" type="color" hidden>
+    </div>
+</div>
+</body>
+</html>
