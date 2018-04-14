@@ -20,6 +20,9 @@ self.addEventListener('install', function (event) {
 self.addEventListener('fetch', function (event) {
     console.log(event);
     const url = new URL(event.request.url);
+    if (event.request.cache === 'only-if-cached' && event.request.mode !== 'same-origin') {
+        return;
+    }
     if (url.origin == location.origin && url.pathname == "/lightbulb") {
         event.respondWith(caches.match("index.html"));
         return;
