@@ -1,21 +1,16 @@
-{
-  "name": "Web Light",
-  "short_name": "Web Light",
-  "start_url": "https://mykoladekhtiarenko.github.io/lightbulb/",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#b00e23",
-  "icons": [
-    {
-      "src": "lightbulb512x512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    },
-    {
-      "src": "lightbulb144x144.png",
-      "type": "image/png",
-      "sizes": "144x144"
-    }
-  ]
-}
+  {
+    "name": "Web Light",
+    "short_name": "Web Light",
+    "start_url": "https://mykoladekhtiarenko.github.io/lightbulb/",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#b00e23",
+    "icons": [
+      {
+        "src": "lightbulb.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
+  }
 
